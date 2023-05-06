@@ -1,13 +1,14 @@
-import random
+import numpy as np
 from collections import Counter
 
 
 def generateRandomResult():
-    return random.randint(1, 6)
+    return np.random.randint(1,7)
 
 
 def generateRandomResults(n):
     return [generateRandomResult() for _ in range(n)]
 
 
-print(Counter(generateRandomResults(20000)))
+X = generateRandomResults(2000000)
+print(Counter(X))
